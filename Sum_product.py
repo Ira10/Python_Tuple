@@ -39,9 +39,20 @@ def max_of_both(n, f1, f2):
     Returns the maximum value of all these results.
     """
     # your code here
+    # if f1 < f2:
+    #     return f1 
+    # else:
+    #     return f2
 
-# print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
-# print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
+    ############## correct ##############
+    # max_value = float('-inf')  # Start with the lowest possible value
+    # for i in range(n + 1):
+    #     max_value = max(max_value, f1(i), f2(i))
+    # return max_value
+    return max(f1(n), f2(n))
+
+print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
+print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
 
 
 def sublist_sum(L):
